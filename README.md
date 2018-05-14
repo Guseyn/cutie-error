@@ -1,2 +1,2 @@
 # cutie-error
-Cutie extension for error module in Node
+Cutie extension for error module in Node.
