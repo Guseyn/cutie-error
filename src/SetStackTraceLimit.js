@@ -11,7 +11,8 @@ class SetStackTraceLimit extends AsyncObject {
 
   definedSyncCall() {
     return (num) => {
-      return Error.stackTraceLimit = num;
+      Error.stackTraceLimit = num;
+      return num;
     }
   }
 
