@@ -24,7 +24,7 @@ For more information about parameters in the async objects visit [docs of Node](
 | ------------- | ----------------| ---------- | --------------------- |
 | `CapturedStackTrace` | `Error.captureStackTrace` | `targetObject, constructorOpt` | `targetObject` |
 | `Errno` | `error.errno` | `error` | `string|number` |
-| `ErrorAddress` | `error.address` | `error` | `string` |
+| `ErrorAddress` | `error.address` | `error|string` |
 | `ErrorCode` | `error.code` | `error` | `string` |
 | `ErrorMessage` | `error.message` | `error` | `string` |
 | `ErrorPath` | `error.path` | `error` | `string` |
