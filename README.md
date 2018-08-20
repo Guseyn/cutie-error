@@ -23,7 +23,7 @@ For more information about parameters in the async objects visit [docs of Node](
 | Async Object  | Async/sync call | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | `CapturedStackTrace` | `Error.captureStackTrace` | `targetObject, constructorOpt` | `targetObject` |
-| `Errno` | `error.errno` | `error` | `string \| number` |
+| `Errno` | `error.errno` | `error` | `string\|number` |
 | `ErrorAddress` | `error.address` | `error` | `string` |
 | `ErrorCode` | `error.code` | `error` | `string` |
 | `ErrorMessage` | `error.message` | `error` | `string` |
