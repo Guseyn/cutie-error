@@ -18,8 +18,6 @@ const {
 ```
 For more information about parameters in the async objects visit [docs of Node](https://nodejs.org/en/docs/) for <b>error</b> module.
 
-## data
-
 | Async Object  | Async/sync call | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | `CapturedStackTrace` | `Error.captureStackTrace` | `targetObject, constructorOpt` | `targetObject` |
