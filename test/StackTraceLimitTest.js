@@ -2,10 +2,10 @@
 
 const {
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   IsString
-} = require('@guseyn/cutie-is');
+} = require('@cuties/is');
 const {
   SetStackTraceLimit,
   StackTraceLimit

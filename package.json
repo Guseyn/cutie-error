@@ -1,6 +1,6 @@
 {
-  "name": "@guseyn/cutie-error",
-  "version": "1.0.5",
+  "name": "@cuties/error",
+  "version": "1.0.6",
   "description": "Cutie extension for error module in Node.",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,9 @@
   ],
   "dependencies": {
     "@cuties/cutie": "1.4.3",
-    "@cuties/assert": "1.1.2",
-    "@guseyn/cutie-is": "1.0.2",
-    "test-executor": "1.0.8"
+    "@cuties/assert": "1.1.4",
+    "@cuties/is": "1.0.6",
+    "test-executor": "1.1.0"
   },
   "author": "guseyn",
   "license": "MIT",
