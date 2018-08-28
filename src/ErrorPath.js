@@ -1,6 +1,6 @@
 'use strict'
 
-const { AsyncObject } = require('@guseyn/cutie');
+const { AsyncObject } = require('@cuties/cutie');
 
 // Repressented result is string
 class ErrorPath extends AsyncObject {

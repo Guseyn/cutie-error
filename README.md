@@ -14,7 +14,7 @@ You can find examples of using this library in the [test directory](https://gith
 ```js
 const {
   // Needed async objects here from the table below
-} = require('@guseyn/cutie-error');
+} = require('@cuties/error');
 ```
 For more information about parameters in the async objects visit [docs of Node](https://nodejs.org/en/docs/) for <b>error</b> module.
 
@@ -32,5 +32,5 @@ For more information about parameters in the async objects visit [docs of Node](
 | `SetStackTraceLimit` | `Error.stackTraceLimit` | `num` | `num` |
 | `StackTraceLimit` | `Error.stackTraceLimit` | | `num` |
 
-[npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-error.svg
-[npm-url]: https://npmjs.org/package/@guseyn/cutie-error
+[npm-image]: https://img.shields.io/npm/v/@cuties/error.svg
+[npm-url]: https://npmjs.org/package/@cuties/error

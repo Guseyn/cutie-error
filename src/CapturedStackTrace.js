@@ -1,6 +1,6 @@
 'use strict'
 
-const { AsyncObject } = require('@guseyn/cutie');
+const { AsyncObject } = require('@cuties/cutie');
 
 // Repressented result is targetObject (with captured stackTrace)
 class CapturedStackTrace extends AsyncObject {
