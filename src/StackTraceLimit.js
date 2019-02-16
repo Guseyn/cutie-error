@@ -1,20 +1,18 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 // Repressented result is number
 class StackTraceLimit extends AsyncObject {
-
-  constructor() {
-    super();
+  constructor () {
+    super()
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return () => {
-      return Error.stackTraceLimit;
+      return Error.stackTraceLimit
     }
   }
-
 }
 
-module.exports = StackTraceLimit;
+module.exports = StackTraceLimit

@@ -7,17 +7,17 @@ const {
   IsString
 } = require('@cuties/is')
 const {
-  ErrorAddress
+  ErrorPath
 } = require('./../index')
 
 try {
   let error = new Error('error')
-  error.address = 'http://undefined'
+  error.path = 'ERROR_PATH'
   throw error
 } catch (error) {
   new Assertion(
     new IsString(
-      new ErrorAddress(
+      new ErrorPath(
         error
       )
     )

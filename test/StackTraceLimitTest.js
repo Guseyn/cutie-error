@@ -1,20 +1,17 @@
 'use strict'
 
 const {
-  EqualAssertion
-} = require('@cuties/assert');
-const {
-  IsString
-} = require('@cuties/is');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   SetStackTraceLimit,
   StackTraceLimit
-} = require('./../index');
+} = require('./../index')
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new SetStackTraceLimit(7), 7
 ).after(
-  new EqualAssertion(
+  new StrictEqualAssertion(
     new StackTraceLimit(), 7
   )
-).call();
+).call()

@@ -1,20 +1,18 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 // Repressented result is string
 class ErrorPath extends AsyncObject {
-
-  constructor(error) {
-    super(error);
+  constructor (error) {
+    super(error)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (error) => {
-      return error.path;
+      return error.path
     }
   }
-
 }
 
-module.exports = ErrorPath;
+module.exports = ErrorPath

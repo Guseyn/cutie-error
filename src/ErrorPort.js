@@ -1,20 +1,18 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 // Repressented result is number
 class ErrorPort extends AsyncObject {
-
-  constructor(error) {
-    super(error);
+  constructor (error) {
+    super(error)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (error) => {
-      return error.port;
+      return error.port
     }
   }
-
 }
 
-module.exports = ErrorPort;
+module.exports = ErrorPort

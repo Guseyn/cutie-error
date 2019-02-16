@@ -1,14 +1,14 @@
- 'use strict'
+'use strict'
 
 const {
-  DeepEqualAssertion
-} = require('@cuties/assert');
+  DeepStrictEqualAssertion
+} = require('@cuties/assert')
 const {
   CapturedStackTrace
-} = require('./../index');
+} = require('./../index')
 
-const obj = {};
+const obj = {}
 
-new DeepEqualAssertion(
-  new CapturedStackTrace(obj), obj 
-).call();
+new DeepStrictEqualAssertion(
+  new CapturedStackTrace(obj), obj
+).call()

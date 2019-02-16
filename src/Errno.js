@@ -1,20 +1,18 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 // Repressented result is string | number
 class Errno extends AsyncObject {
-
-  constructor(error) {
-    super(error);
+  constructor (error) {
+    super(error)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (error) => {
-      return error.errno;
+      return error.errno
     }
   }
-
 }
 
-module.exports = Errno;
+module.exports = Errno

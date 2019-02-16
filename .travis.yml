@@ -1,0 +1,42 @@
+language: node_js
+node_js:
+- lts/*
+install: |-
+  npm ci
+  npm install -g codecov
+script: |-
+  npm run build
+  ./node_modules/.bin/nyc report --reporter lcovonly -- -R spec
+  codecov
+  log=$(git log $TRAVIS_COMMIT_RANGE --oneline)
+  echo $'**Change log:**<br/>'${log//$'\n'/<br/>}
+branches:
+  only:
+    - master
+before_deploy: |-
+  log=$(git log $TRAVIS_COMMIT_RANGE --oneline)
+  export TAG=$'v'$TRAVIS_COMMIT_MESSAGE
+  export BODY=$'**Change log:**<br/>'${log//$'\n'/<br/>}
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    api_key:
+      secure: FkDzx/6DGqwcho+ywpTMdfQIc2R+OfoSAvas4jL0nk2Z2b3uJYZ+idlwnz9Mce3WRfMBE6GFAkRl5jTFB8FuOcuTME4LnKxzd/xgCVnzTGg2+uASw5HOEw6R8YC09rYUgI/YuqoocfmB1olmPfsRsdgFSNIDtTaMgTuix7fQpCn4ahtN4pdhV5BSJn8EoEmwN+vpDV4Gw81TWMZqMFBpJ2xhnL0I9/oaQUVSn7qhAGQTiC2wX4tuEO4wXuMiVL2rT/HlBHcb+3spk/kC54axmntqbq6kHbo/IMTr+QGqImvwYvpgvrYuenHTFGzdapCJUgzkpteFIMIMIxd1Apw7mb3sb/EUk5+xm6/ssbIfBqPmAkpI6HsVd2QfibSEhXVJjMSb4lLKky0R1L5ZwhhNfzwONHMH2pHY86SEzc59NS7QU1P9JiS3GQ3rUc/X/2i89OtHu7AMpnc9l61Whw+YnHUJ3v/gtgFebLxCMMpvv1pQ8cYzlJi25vHwr0KtLUWfiqoJaXM7wK37RpwmBm3SXX9ZI2Y5T/d82t58apHl2rUus8X5MFpM/0qWfundWKcHv/tpGCGrXgu5Pp4ARbLjepjj8DH+4slwD1cVzOpEOa/Sdc0X+n6GVc2yIKVly/DDLMki5yBIdRgcHlqvmNGmtqkCauJ/Z4HjcVQx1SYg24Q=
+    file: README.md
+    name: Release $TRAVIS_COMMIT_MESSAGE
+    tag_name: $TAG
+    body: $BODY
+    on:
+      repo: Guseyn/cutie-error
+      branch:
+        - master
+      condition: $TRAVIS_COMMIT_MESSAGE =~ ^([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3})$
+  - provider: npm
+    email: guseynism@gmail.com
+    api_key:
+      secure: 5lcDCZ7cyXEp1t8o2NSnUF+obAtmNkV+wynf3RH+QZj/zBr+hxt8G2+bUUgfUEIhOQykaBKuiGOxCkpId6je/fw4yYw51STiYBVfxcm8Y3yS52cCOf4Y6Kj6DN3g8gm0Oc5pHCcv8n4Ld+h5HlpJs31u093BAwmzSu1HNRzdkrav224v41kQbgslhf2qiAVBevn91urAmrWCO82OULFne7X3kVL2olsO3fQl5niHQdQI0GogdbbR4/nJ6gWTt/LmTJfSefzv+U6mBnNK3PO5r5KvNYJ52SPC+cuo+A61S0KghAoU7lJRtF+zGFJpQlOM6V2Isjzf53Pz56L+7ps7YSpDxi68L3zr2VRwKPn8j3fPr+9uhipvd2nrjv6VHFzRJmqWfENdsa5PFP5sct5OCAoytPeLS9WVqPVPsbqt+rzUIWbFz9bofnrx09buakZMoTcM9ErPKxVpTWpvNLxayYLqvsioJw8GxnAUdMUQAHkv1zpJax7Ekh95AopgFLckPAdnpRcmZ4s8X/kyYfBFs2kOQYs7QXMH/Co4ux7+Tx996gZ+bpF8Ij6bU7OCO+bLG757R03VquIUa7kWe3EFug6Dz2BJwHlKhprsM+ww54+3Uj0ajPSObzhTOz66Y9R34r+OJ/su//4Yto2tNOl3+7LZoP+ixURYuo0LP7Bb00Q=
+    on:
+      repo: Guseyn/cutie-error
+      branch:
+        - master
+      condition: $TRAVIS_COMMIT_MESSAGE =~ ^([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3})$

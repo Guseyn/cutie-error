@@ -1,19 +1,19 @@
- 'use strict'
+'use strict'
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   IsString
-} = require('@cuties/is');
+} = require('@cuties/is')
 const {
   ErrorCode
-} = require('./../index');
+} = require('./../index')
 
 try {
-  let error = new Error('error');
-  error.code = 'ERROR_CODE';
-  throw error;
+  let error = new Error('error')
+  error.code = 'ERROR_CODE'
+  throw error
 } catch (error) {
   new Assertion(
     new IsString(
@@ -21,5 +21,5 @@ try {
         error
       )
     )
-  ).call();
+  ).call()
 }
