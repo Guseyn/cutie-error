@@ -12,7 +12,7 @@ You can find examples of using this library in the [test directory](https://gith
 
 ## Install
 
-`npm install @cuties/is`
+`npm install @cuties/error`
 
 ## Run test
 
