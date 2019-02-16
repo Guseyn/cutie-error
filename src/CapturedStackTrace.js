@@ -1,21 +1,19 @@
 'use strict'
 
-const { AsyncObject } = require('@cuties/cutie');
+const { AsyncObject } = require('@cuties/cutie')
 
 // Repressented result is targetObject (with captured stackTrace)
 class CapturedStackTrace extends AsyncObject {
-
-  constructor(targetObject, constructorOpt) {
-    super(targetObject, constructorOpt);
+  constructor (targetObject, constructorOpt) {
+    super(targetObject, constructorOpt)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (targetObject, constructorOpt) => {
-      Error.captureStackTrace(targetObject, constructorOpt);
-      return targetObject;
+      Error.captureStackTrace(targetObject, constructorOpt)
+      return targetObject
     }
   }
-
 }
 
-module.exports = CapturedStackTrace;
+module.exports = CapturedStackTrace

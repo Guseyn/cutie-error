@@ -2,18 +2,18 @@
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   IsString
-} = require('@cuties/is');
+} = require('@cuties/is')
 const {
   ErrorStack
-} = require('./../index');
+} = require('./../index')
 
 try {
-  let error = new Error('error');
-  error.stack = 'Error:\n stack of error';
-  throw error;
+  let error = new Error('error')
+  error.stack = 'Error:\n stack of error'
+  throw error
 } catch (error) {
   new Assertion(
     new IsString(
@@ -21,5 +21,5 @@ try {
         error
       )
     )
-  ).call();
+  ).call()
 }
