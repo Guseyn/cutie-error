@@ -8,7 +8,7 @@ class ErrorMessage extends AsyncObject {
     super(error)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (error) => {
       return error.message
     }

@@ -8,7 +8,7 @@ class ErrorSyscall extends AsyncObject {
     super(error)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (error) => {
       return error.syscall
     }

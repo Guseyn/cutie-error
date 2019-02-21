@@ -8,7 +8,7 @@ class CapturedStackTrace extends AsyncObject {
     super(targetObject, constructorOpt)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (targetObject, constructorOpt) => {
       Error.captureStackTrace(targetObject, constructorOpt)
       return targetObject

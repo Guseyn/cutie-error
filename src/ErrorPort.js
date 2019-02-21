@@ -8,7 +8,7 @@ class ErrorPort extends AsyncObject {
     super(error)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (error) => {
       return error.port
     }

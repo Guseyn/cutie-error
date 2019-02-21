@@ -8,7 +8,7 @@ class ErrorCode extends AsyncObject {
     super(error)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (error) => {
       return error.code
     }
