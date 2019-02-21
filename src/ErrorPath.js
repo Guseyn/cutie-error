@@ -8,7 +8,7 @@ class ErrorPath extends AsyncObject {
     super(error)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (error) => {
       return error.path
     }

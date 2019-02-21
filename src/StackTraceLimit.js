@@ -8,7 +8,7 @@ class StackTraceLimit extends AsyncObject {
     super()
   }
 
-  definedSyncCall () {
+  syncCall () {
     return () => {
       return Error.stackTraceLimit
     }

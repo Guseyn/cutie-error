@@ -8,7 +8,7 @@ class ErrorAddress extends AsyncObject {
     super(error)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (error) => {
       return error.address
     }

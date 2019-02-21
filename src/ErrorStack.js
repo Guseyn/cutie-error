@@ -8,7 +8,7 @@ class ErrorStack extends AsyncObject {
     super(error)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (error) => {
       return error.stack
     }

@@ -8,7 +8,7 @@ class Errno extends AsyncObject {
     super(error)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (error) => {
       return error.errno
     }
