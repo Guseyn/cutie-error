@@ -10,6 +10,7 @@ module.exports = {
   ErrorStack: require('./src/ErrorStack'),
   ErrorSyscall: require('./src/ErrorSyscall'),
   SetStackTraceLimit: require('./src/SetStackTraceLimit'),
-  StackTraceLimit: require('./src/StackTraceLimit')
+  StackTraceLimit: require('./src/StackTraceLimit'),
+  ThrownError: require('./src/ThrownError')
 
 }

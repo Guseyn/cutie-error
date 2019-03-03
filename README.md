@@ -44,3 +44,4 @@ For more information about parameters in the async objects visit [docs of Node](
 | `ErrorSyscall` | `error.syscall` | `error` | `string` |
 | `SetStackTraceLimit` | `Error.stackTraceLimit` | `num` | `num` |
 | `StackTraceLimit` | `Error.stackTraceLimit` | | `num` |
+| `ThrownError` | `throw error` | | |
