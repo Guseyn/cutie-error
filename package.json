@@ -4,7 +4,7 @@
   "description": "Cutie extension for error module in Node.",
   "main": "index.js",
   "scripts": {
-    "test": "node test-executor",
+    "test": "node",
     "build": "node build"
   },
   "repository": {
@@ -16,19 +16,19 @@
     "error",
     "node"
   ],
-  "dependencies": {
-    "@cuties/assert": "^1.2.0",
-    "@cuties/cutie": "^1.7.0",
-    "@cuties/is": "^1.1.0",
-    "@cuties/wall": "^1.1.0",
-    "test-executor": "^1.2.0"
-  },
   "author": "guseyn",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Guseyn/cutie-error/issues"
   },
   "homepage": "https://github.com/Guseyn/cutie-error#readme",
+  "dependencies": {
+    "@cuties/assert": "^1.2.1",
+    "@cuties/cutie": "^1.7.4",
+    "@cuties/is": "^1.1.1",
+    "@cuties/wall": "^1.1.1",
+    "test-executor": "^1.2.1"
+  },
   "devDependencies": {
     "eslint": "^5.14.0",
     "eslint-config-standard": "^12.0.0",
