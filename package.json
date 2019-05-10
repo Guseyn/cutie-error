@@ -4,7 +4,7 @@
   "description": "Cutie extension for error module in Node.",
   "main": "index.js",
   "scripts": {
-    "test": "node",
+    "test": "node test",
     "build": "node build"
   },
   "repository": {
